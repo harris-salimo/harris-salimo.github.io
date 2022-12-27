@@ -17,11 +17,8 @@ Here is some projects that I have worked on.
 
 How to reach me! Here is some useful links for that.
 
-<center>
 :telephone_receiver: +261 32 482 8925 - :email: harrismailasalimo@gmail.com
 
 or
 
 [facebook](https://www.facebook.com/harris.salimo/) - [linkedin](https://www.linkedin.com/in/harris-maila-salimo-098745210/)
-</center>
-  
