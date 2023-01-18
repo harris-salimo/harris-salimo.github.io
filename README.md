@@ -1,7 +1,13 @@
 # About Me
 
-Hi :wave:! I'm Harris. I'm a software developer and passionate about new technology.
+Hi :wave:! I'm Harris. I'm a web developer and passionate about new technology.
 
+## Skills
+- JavaScript / TypeScript
+- Python
+- PHP
+- Java
+- Go
 
 # My projects
 
