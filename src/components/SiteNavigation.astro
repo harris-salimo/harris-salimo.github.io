@@ -1,0 +1,57 @@
+---
+const pathname = Astro.url.pathname;
+const isHome = pathname === '/';
+const isBlog = pathname.startsWith('/blog');
+
+const items = [
+  { label: 'Home', href: '/#home', current: isHome },
+  { label: 'Work', href: '/#work', current: false },
+  { label: 'Services', href: '/#services', current: false },
+  { label: 'Blog', href: '/blog/', current: isBlog },
+  { label: 'Contact', href: '/#contact', current: false },
+];
+---
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-nav" data-site-nav>
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="/#home" aria-label="Harris Maïla Salimo — portfolio home">
+      <span aria-hidden="true">HMS</span>
+      <span>Harris Maïla Salimo</span>
+    </a>
+
+    <nav class="site-nav__desktop" aria-label="Primary navigation">
+      {
+        items.map((item) => (
+          <a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
+        ))
+      }
+    </nav>
+
+    <details class="site-nav__mobile">
+      <summary>
+        <span>Menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m7.4 8.6 4.6 4.6 4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z" />
+        </svg>
+      </summary>
+      <nav aria-label="Mobile navigation">
+        {
+          items.map((item) => (
+            <a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll('[data-site-nav]').forEach((navigation) => {
+    const menu = navigation.querySelector('details');
+
+    navigation.querySelectorAll('.site-nav__mobile a').forEach((link) => {
+      link.addEventListener('click', () => menu?.removeAttribute('open'));
+    });
+  });
+</script>
