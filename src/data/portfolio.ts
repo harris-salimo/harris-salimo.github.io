@@ -136,10 +136,6 @@ export const technologyGroups: TechnologyGroup[] = [
     technologies: ['PostgreSQL', 'MySQL'],
   },
   {
-    category: 'AI',
-    technologies: ['LLM Integration', 'Prompt Engineering', 'AI-Assisted Development'],
-  },
-  {
     category: 'Systems',
     technologies: ['Linux', 'Bash'],
   },
