@@ -1,0 +1,27 @@
+---
+import type { BlogPost } from '../lib/blog';
+import { formatPostDate } from '../lib/blog';
+
+interface Props {
+  post: BlogPost;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { post, headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+---
+
+<article class="article-card">
+  <div class="article-card__meta">
+    <time datetime={post.data.publishedAt.toISOString()}>{formatPostDate(post.data.publishedAt)}</time>
+    {post.data.tags.length > 0 && <span>{post.data.tags.join(' · ')}</span>}
+  </div>
+  <Heading><a href={`/blog/${post.id}/`}>{post.data.title}</a></Heading>
+  <p>{post.data.description}</p>
+  <a class="text-link" href={`/blog/${post.id}/`} aria-label={`Read ${post.data.title}`}>
+    Read article
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 11h10.2l-3.7-3.7L13 5.8l6.2 6.2-6.2 6.2-1.5-1.5 3.7-3.7H5v-2Z" />
+    </svg>
+  </a>
+</article>
