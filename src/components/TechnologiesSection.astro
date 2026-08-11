@@ -1,0 +1,28 @@
+---
+import type { TechnologyGroup } from '../data/portfolio';
+
+interface Props {
+  groups: TechnologyGroup[];
+}
+
+const { groups } = Astro.props;
+---
+
+<section class="technologies" id="technologies" aria-labelledby="technologies-title">
+  <div class="technologies__inner">
+    <div class="section-intro">
+      <p>Tools chosen for the work</p>
+      <h2 id="technologies-title">Technologies</h2>
+    </div>
+    <dl class="technology-list">
+      {
+        groups.map((group) => (
+          <div class="technology-group">
+            <dt>{group.category}</dt>
+            <dd>{group.technologies.join(' · ')}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

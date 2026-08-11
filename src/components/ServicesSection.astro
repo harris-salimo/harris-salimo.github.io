@@ -1,0 +1,29 @@
+---
+import type { Service } from '../data/portfolio';
+
+interface Props {
+  services: Service[];
+}
+
+const { services } = Astro.props;
+---
+
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="services__inner">
+    <div class="section-intro section-intro--light">
+      <p>How I can help</p>
+      <h2 id="services-title">Services</h2>
+    </div>
+    <div class="services__grid">
+      {
+        services.map((service, index) => (
+          <article class="service-card">
+            <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
