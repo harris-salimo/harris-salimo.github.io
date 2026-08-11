@@ -19,6 +19,17 @@ export interface Project {
   repositoryUrl: string;
   repositoryHost: 'GitHub' | 'GitLab';
   image: string;
+  technologies: string[];
+}
+
+export interface Service {
+  title: string;
+  description: string;
+}
+
+export interface TechnologyGroup {
+  category: string;
+  technologies: string[];
 }
 
 export const socialLinks: SocialLink[] = [
@@ -47,6 +58,7 @@ export const projects: Project[] = [
     repositoryUrl: 'https://gitlab.com/HarrisSalimo/expense-tracker',
     repositoryHost: 'GitLab',
     image: expenseTrackerImage,
+    technologies: ['TypeScript', 'AdonisJS', 'React', 'Inertia'],
   },
   {
     title: 'Manager',
@@ -55,6 +67,7 @@ export const projects: Project[] = [
     repositoryUrl: 'https://gitlab.com/HarrisSalimo/manager',
     repositoryHost: 'GitLab',
     image: managerImage,
+    technologies: ['PHP', 'Laravel', 'React', 'Inertia'],
   },
   {
     title: 'Message App',
@@ -63,6 +76,7 @@ export const projects: Project[] = [
     repositoryUrl: 'https://gitlab.com/HarrisSalimo/message-app',
     repositoryHost: 'GitLab',
     image: messageAppImage,
+    technologies: ['TypeScript', 'AdonisJS', 'React', 'SSE'],
   },
   {
     title: 'Inventory',
@@ -71,6 +85,7 @@ export const projects: Project[] = [
     repositoryUrl: 'https://gitlab.com/HarrisSalimo/inventory',
     repositoryHost: 'GitLab',
     image: inventoryImage,
+    technologies: ['TypeScript', 'AdonisJS', 'React', 'Monorepo'],
   },
   {
     title: 'Face Detector',
@@ -79,6 +94,7 @@ export const projects: Project[] = [
     repositoryUrl: 'https://github.com/harris-salimo/face-detector',
     repositoryHost: 'GitHub',
     image: faceDetectorImage,
+    technologies: ['Python', 'OpenCV', 'CLI', 'Pytest'],
   },
   {
     title: 'eShop Starter',
@@ -87,5 +103,40 @@ export const projects: Project[] = [
     repositoryUrl: 'https://github.com/harris-salimo/eshop-starter',
     repositoryHost: 'GitHub',
     image: eshopStarterImage,
+    technologies: ['TypeScript', 'AdonisJS', 'React', 'TanStack'],
+  },
+];
+
+export const services: Service[] = [
+  {
+    title: 'Web Application Development',
+    description: 'Full-stack applications built from product requirements to production-ready code.',
+  },
+  {
+    title: 'API & Backend Engineering',
+    description: 'Secure APIs, business logic, authentication, database design, and integrations.',
+  },
+  {
+    title: 'Application Modernization',
+    description: 'Refactoring, migrations, reliability improvements, testing, and developer tooling.',
+  },
+];
+
+export const technologyGroups: TechnologyGroup[] = [
+  {
+    category: 'Frontend',
+    technologies: ['TypeScript', 'React'],
+  },
+  {
+    category: 'Backend',
+    technologies: ['Node.js', 'AdonisJS', 'PHP', 'Laravel', 'Python'],
+  },
+  {
+    category: 'Data',
+    technologies: ['PostgreSQL', 'MySQL'],
+  },
+  {
+    category: 'Systems',
+    technologies: ['Linux', 'Bash'],
   },
 ];

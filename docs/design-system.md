@@ -2,6 +2,8 @@
 
 Code-ready visual and responsive specification for the portfolio implementation.
 
+> The approved personalization in `docs/personalization.md` supersedes this document's Odin-inspired typography, palette, portrait treatment, project colors, and contact composition. This document remains the source for the responsive architecture, semantic expectations, and original fidelity baseline.
+
 ## Source of truth
 
 The approved design references are:

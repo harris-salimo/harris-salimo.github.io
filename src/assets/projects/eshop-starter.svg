@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title">
   <title id="title">eShop Starter project placeholder</title>
-  <rect width="1200" height="900" fill="#4BA2D2"/>
-  <text x="600" y="405" fill="#0B1009" font-family="Playfair Display, Georgia, serif" font-size="112" text-anchor="middle">
+  <rect width="1200" height="900" fill="#6B7C93"/>
+  <text x="600" y="405" fill="#101820" font-family="Space Grotesk, Arial, sans-serif" font-size="112" font-weight="500" text-anchor="middle">
     <tspan x="600">eShop</tspan>
     <tspan x="600" dy="132">Starter</tspan>
   </text>

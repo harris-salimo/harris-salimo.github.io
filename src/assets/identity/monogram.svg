@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title">
+  <title id="title">Harris Maïla Salimo monogram</title>
+  <rect width="900" height="1100" fill="#0B4F5C"/>
+  <g fill="none" stroke="#F7F3EA" stroke-opacity=".16">
+    <path d="M0 110h900M0 330h900M0 550h900M0 770h900M0 990h900"/>
+    <path d="M90 0v1100M270 0v1100M450 0v1100M630 0v1100M810 0v1100"/>
+  </g>
+  <path d="M105 92h18v916h-18z" fill="#E3A33C"/>
+  <text x="450" y="520" fill="#F7F3EA" font-family="Space Grotesk, Arial, sans-serif" font-size="330" font-weight="500" letter-spacing="-45" text-anchor="middle">HMS</text>
+  <text x="450" y="920" fill="#E3A33C" font-family="Roboto, Arial, sans-serif" font-size="34" letter-spacing="12" text-anchor="middle">FULL-STACK DEVELOPER</text>
+</svg>

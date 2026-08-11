@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title">
+  <title id="title">Abstract engineering grid with the Harris Maïla Salimo monogram</title>
+  <rect width="1200" height="900" fill="#122A32"/>
+  <g fill="none" stroke="#F7F3EA" stroke-opacity=".1">
+    <path d="M0 150h1200M0 300h1200M0 450h1200M0 600h1200M0 750h1200"/>
+    <path d="M150 0v900M300 0v900M450 0v900M600 0v900M750 0v900M900 0v900M1050 0v900"/>
+  </g>
+  <path d="M155 185h510v22H155zm0 74h350v22H155zm0 74h430v22H155z" fill="#F7F3EA" fill-opacity=".72"/>
+  <path d="M155 535h190v190H155z" fill="#E3A33C"/>
+  <path d="M397 535h190v190H397z" fill="#1F6F78"/>
+  <path d="M639 535h190v190H639z" fill="#F7F3EA" fill-opacity=".9"/>
+  <text x="950" y="715" fill="#E3A33C" font-family="Space Grotesk, Arial, sans-serif" font-size="205" font-weight="500" text-anchor="middle">HMS</text>
+</svg>

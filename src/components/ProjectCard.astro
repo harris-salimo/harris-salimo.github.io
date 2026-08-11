@@ -33,6 +33,7 @@ const { project } = Astro.props;
         }
       </a>
     </div>
+    <p class="project-card__technologies">{project.technologies.join(' · ')}</p>
     <p>{project.description}</p>
   </div>
 </article>
