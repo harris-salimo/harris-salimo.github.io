@@ -104,27 +104,6 @@ a:focus-visible {
   isolation: isolate;
 }
 
-.hero__backdrop {
-  position: absolute;
-  z-index: -1;
-  inset: 32px 0 auto;
-  height: 590px;
-  border-top: 12px solid var(--color-amber);
-  border-bottom: 1px solid rgb(11 79 92 / 24%);
-  background-image:
-    linear-gradient(rgb(11 79 92 / 9%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(11 79 92 / 9%) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
-
-.hero__backdrop::before {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: max(18px, calc((100vw - 1260px) / 2 - 24px));
-  background: var(--color-petroleum);
-  content: "";
-}
-
 .hero__inner {
   position: relative;
   width: min(1260px, calc(100% - 80px));
@@ -182,9 +161,9 @@ a:focus-visible {
 
 .about {
   position: absolute;
-  right: 82px;
+  right: 150px;
   bottom: 0;
-  left: 260px;
+  left: 190px;
   min-height: 280px;
   padding: 38px 48px 44px;
   border: var(--border-strong);
@@ -1100,6 +1079,32 @@ a:focus-visible {
   height: 35px;
 }
 
+.contact__back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 42px;
+  color: var(--color-page);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+.contact__back-to-top svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.contact__back-to-top:hover {
+  color: var(--color-amber);
+  transform: translateY(-3px);
+}
+
 .contact__portrait {
   width: 100%;
   height: auto;
@@ -1113,10 +1118,6 @@ a:focus-visible {
 @media (min-width: 600px) and (max-width: 1099px) {
   .hero {
     min-height: 940px;
-  }
-
-  .hero__backdrop {
-    height: 610px;
   }
 
   .hero__inner {
@@ -1145,9 +1146,9 @@ a:focus-visible {
   }
 
   .about {
-    right: 0;
+    right: 32px;
     bottom: 0;
-    left: 70px;
+    left: 38px;
     min-height: 320px;
   }
 
@@ -1272,17 +1273,6 @@ a:focus-visible {
   .hero {
     min-height: auto;
     padding: 0 22px 150px;
-  }
-
-  .hero__backdrop {
-    inset: 20px 0 auto;
-    height: 520px;
-    border-top-width: 8px;
-    background-size: 42px 42px;
-  }
-
-  .hero__backdrop::before {
-    width: 12px;
   }
 
   .hero__inner {
