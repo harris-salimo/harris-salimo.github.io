@@ -1,0 +1,22 @@
+<script is:inline>
+  (() => {
+    const storageKey = 'portfolio-theme';
+    let savedTheme = null;
+
+    try {
+      savedTheme = localStorage.getItem(storageKey);
+    } catch {
+      // Storage can be unavailable in privacy-restricted browsing contexts.
+    }
+
+    const systemTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : systemTheme;
+    const root = document.documentElement;
+
+    root.dataset.theme = theme;
+    root.style.colorScheme = theme;
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', theme === 'dark' ? '#0B1419' : '#0B4F5C');
+  })();
+</script>

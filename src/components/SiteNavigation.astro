@@ -1,4 +1,6 @@
 ---
+import NavigationControls from './react/NavigationControls';
+
 const pathname = Astro.url.pathname;
 const isHome = pathname === '/';
 const isBlog = pathname.startsWith('/blog');
@@ -20,38 +22,6 @@ const items = [
       <span>Harris Maïla Salimo</span>
     </a>
 
-    <nav class="site-nav__desktop" aria-label="Primary navigation">
-      {
-        items.map((item) => (
-          <a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
-        ))
-      }
-    </nav>
-
-    <details class="site-nav__mobile">
-      <summary>
-        <span>Menu</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m7.4 8.6 4.6 4.6 4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z" />
-        </svg>
-      </summary>
-      <nav aria-label="Mobile navigation">
-        {
-          items.map((item) => (
-            <a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
-          ))
-        }
-      </nav>
-    </details>
+    <NavigationControls items={items} client:load />
   </div>
 </header>
-
-<script>
-  document.querySelectorAll('[data-site-nav]').forEach((navigation) => {
-    const menu = navigation.querySelector('details');
-
-    navigation.querySelectorAll('.site-nav__mobile a').forEach((link) => {
-      link.addEventListener('click', () => menu?.removeAttribute('open'));
-    });
-  });
-</script>

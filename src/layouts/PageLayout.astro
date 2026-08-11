@@ -1,5 +1,6 @@
 ---
 import SiteNavigation from '../components/SiteNavigation.astro';
+import ThemeScript from '../components/ThemeScript.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -20,6 +21,7 @@ const { title, description, type = 'website' } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0B4F5C" />
+    <ThemeScript />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />

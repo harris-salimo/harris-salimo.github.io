@@ -7,6 +7,7 @@ import ProjectGrid from '../components/ProjectGrid.astro';
 import ServicesSection from '../components/ServicesSection.astro';
 import SiteNavigation from '../components/SiteNavigation.astro';
 import TechnologiesSection from '../components/TechnologiesSection.astro';
+import ThemeScript from '../components/ThemeScript.astro';
 import { projects, services, technologyGroups } from '../data/portfolio';
 import { sortPostsByDate } from '../lib/blog';
 import '../styles/global.css';
@@ -28,6 +29,7 @@ const latestPosts = sortPostsByDate(
 			content="Full-stack developer building reliable, maintainable web applications from interface to infrastructure."
 		/>
 		<meta name="theme-color" content="#0B4F5C" />
+		<ThemeScript />
 		<meta property="og:title" content="Harris Maïla Salimo — Full-Stack Developer" />
 		<meta
 			property="og:description"
