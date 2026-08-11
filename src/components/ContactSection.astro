@@ -1,0 +1,24 @@
+---
+import contactPortrait from '../assets/portraits/contact-placeholder.png';
+import { socialLinks } from '../data/portfolio';
+import SocialLinks from './SocialLinks.astro';
+---
+
+<footer class="contact">
+  <div class="contact__inner">
+    <section class="contact__copy" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact me</h2>
+      <p>Interested in working together or discussing a project? Send me a message on LinkedIn. You can also explore my work on GitHub and GitLab.</p>
+      <SocialLinks links={socialLinks} location="contact" />
+    </section>
+    <img
+      class="contact__portrait"
+      src={contactPortrait.src}
+      alt="A developer taking a call while working at a laptop"
+      width={contactPortrait.width}
+      height={contactPortrait.height}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+</footer>

@@ -1,17 +1,31 @@
 ---
-
+import ContactSection from '../components/ContactSection.astro';
+import HeroAbout from '../components/HeroAbout.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { projects } from '../data/portfolio';
+import '../styles/global.css';
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta
+			name="description"
+			content="Full-stack developer building reliable, maintainable web applications from interface to infrastructure."
+		/>
+		<meta name="theme-color" content="#0891B2" />
+		<title>Harris Maïla Salimo — Full-Stack Developer</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<HeroAbout />
+		<main>
+			<ProjectGrid projects={projects} />
+		</main>
+		<ContactSection />
 	</body>
 </html>

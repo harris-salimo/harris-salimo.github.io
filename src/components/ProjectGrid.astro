@@ -1,0 +1,19 @@
+---
+import type { Project } from '../data/portfolio';
+import ProjectCard from './ProjectCard.astro';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section class="work" aria-labelledby="work-title">
+  <div class="work__inner">
+    <h2 id="work-title">My work</h2>
+    <div class="project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+import heroPortrait from '../assets/portraits/hero-placeholder.png';
+import { socialLinks } from '../data/portfolio';
+import SocialLinks from './SocialLinks.astro';
+---
+
+<header class="hero">
+  <div class="hero__backdrop" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__portrait-wrap">
+      <img
+        class="hero__portrait"
+        src={heroPortrait.src}
+        alt="A developer focused on work at a laptop"
+        width={heroPortrait.width}
+        height={heroPortrait.height}
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="hero__identity">
+        <h1>Harris Maïla Salimo</h1>
+        <p>Full-Stack Developer</p>
+      </div>
+    </div>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="about__copy">
+        <h2 id="about-title">About me</h2>
+        <p>
+          I’m a full-stack developer focused on building reliable, maintainable web applications from interface to infrastructure. I work across TypeScript, React, Node.js, AdonisJS, PHP, Laravel, and SQL databases, with Linux, Bash, and Python as part of my daily toolkit. I enjoy turning complex requirements into clear, practical software.
+        </p>
+      </div>
+      <SocialLinks links={socialLinks} location="hero" />
+    </section>
+  </div>
+</header>
