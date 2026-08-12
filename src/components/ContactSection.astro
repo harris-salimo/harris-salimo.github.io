@@ -1,7 +1,8 @@
 ---
-import contactGraphic from '../assets/identity/contact-graphic.svg?url';
 import { socialLinks } from '../data/portfolio';
 import SocialLinks from './SocialLinks.astro';
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="contact" id="contact">
@@ -10,6 +11,8 @@ import SocialLinks from './SocialLinks.astro';
       <h2 id="contact-title">Contact me</h2>
       <p>Interested in working together or discussing a project? Send me a message on LinkedIn. You can also explore my work on GitHub and GitLab.</p>
       <a class="contact__action" href="https://www.linkedin.com/in/harris-ma%C3%AFla-salimo/" target="_blank" rel="noreferrer">Start a conversation on LinkedIn</a>
+    </section>
+    <aside class="contact__navigation" aria-label="Footer navigation">
       <SocialLinks links={socialLinks} location="contact" />
       <a class="contact__back-to-top" href="#top">
         Back to top
@@ -17,15 +20,11 @@ import SocialLinks from './SocialLinks.astro';
           <path d="m12 5-7 7 1.8 1.8 3.9-3.9V20h2.6V9.9l3.9 3.9L19 12l-7-7Z" />
         </svg>
       </a>
-    </section>
-    <img
-      class="contact__portrait"
-      src={contactGraphic}
-      alt=""
-      width="1200"
-      height="900"
-      loading="lazy"
-      decoding="async"
-    />
+    </aside>
   </div>
+  <p class="contact__credit">
+    Made with <span class="contact__heart" role="img" aria-label="care">♥</span> by Harris Maïla Salimo
+    <span aria-hidden="true">·</span>
+    © {currentYear}
+  </p>
 </footer>
